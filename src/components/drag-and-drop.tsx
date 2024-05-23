@@ -15,7 +15,7 @@ export const Drop = ({ children, ...props }: DropProps) => {
     <Droppable {...props}>
       {(provided) => {
         if (React.isValidElement(children)) {
-          return React.cloneElement(children, {
+          return React.cloneElement(children as React.ReactElement<any>, {
             ...provided.droppableProps,
             ref: provided.innerRef,
             provided,
@@ -46,7 +46,7 @@ export const Drag = ({ children, ...props }: DragProps) => {
     <Draggable {...props}>
       {(provided) => {
         if (React.isValidElement(children)) {
-          return React.cloneElement(children, {
+          return React.cloneElement(children as React.ReactElement<any>, {
             ...provided.draggableProps,
             ...provided.dragHandleProps,
             ref: provided.innerRef,
