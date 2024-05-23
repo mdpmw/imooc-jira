@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   useMount(
     useCallback(() => {
       run(bootstrapUser());
-    }, [])
+    }, [run])
   );
 
   if (isIdle || isLoading) {
