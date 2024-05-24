@@ -20,7 +20,7 @@ export default function UnauthenticatedApp() {
       <Header />
       <Background />
       <ShadowCard>
-        <Title>{isRegister ? "请注册" : "请登录"}</Title>
+        <Title>{isRegister ? "请注册吧" : "请登录"}</Title>
         <ErrorBox error={error} />
         {isRegister ? (
           <RegisterScreen onError={setError} />
